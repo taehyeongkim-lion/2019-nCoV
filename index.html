@@ -1,21 +1,31 @@
 ---
 layout: home-page
 ---
+
 <ol class="post-card-box clearfix">
-  {% for post in paginator.posts %}
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.header_pages | default: default_paths -%}
+
+
+  {% for path in page_paths %}
+  {%- assign my_page = site.pages | where: "path", path | first -%}
+  {%- if my_page.title -%}
+
   <li>
     <div class="post-card">
-      <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
+      <a href="{{my_page.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: my_page.baseurl | append : post.img}} )">
       </a>
 
       <div class="post-card-body">
         {% for tag in post.tags %}
         <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">|&#32;{{ tag }}</a>
         {% endfor %}
-        <a href="{{post.url | prepend: site.baseurl}}" class="post-card-link"><h3 class="post-card-title">{{post.title}}</h3></a>
+        <a href="{{post.url | prepend: site.baseurl}}" class="post-card-link"><h3 class="post-card-title">{{my_page.title}}</h3></a>
       </div>
 
     </div>
   </li>
+  {%- endif -%}
   {% endfor %}
+
 </ol>
