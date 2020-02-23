@@ -29,12 +29,18 @@ layout: default
           </div><!-- End Share -->
         </div>
         {% include author-box.html %}
+
+        {% comment %}
         {% include recent-post.html %}
         {% include newsletter.html %}
         {% include disqus.html %}
+        {% endcomment %}
+
       </div>
     </div> <!-- End Wrapper -->
   </article>
+  {% comment %}
   {% include search.html %}
+  {% endcomment %}
   {% include footer.html %}
 </div>

@@ -13,11 +13,11 @@ layout: home-page
 
   <li>
     <div class="post-card">
-      <a href="{{my_page.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: my_page.baseurl | append : post.img}} )">
+      <a href="{{my_page.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : my_page.img}} )">
       </a>
 
       <div class="post-card-body">
-        {% for tag in post.tags %}
+        {% for tag in my_page.tags %}
         <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">|&#32;{{ tag }}</a>
         {% endfor %}
         <a href="{{post.url | prepend: site.baseurl}}" class="post-card-link"><h3 class="post-card-title">{{my_page.title}}</h3></a>
