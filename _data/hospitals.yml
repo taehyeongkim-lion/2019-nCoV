@@ -1,0 +1,14 @@
+- name: A 병원
+  lat: 37.56682
+  lng: 126.97865
+  phone:
+
+- name: B 병원
+  lat: 36.56682
+  lng: 125.97865
+  phone:
+
+- name: C 병원
+  lat: 35.56682
+  lng: 124.97865
+  phone:
