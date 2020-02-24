@@ -22,4 +22,17 @@
 	<link rel="stylesheet" href="{{ "/assets/fonts/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
 	<!-- Styles -->
 	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+	<link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}" />
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('service-worker.js')
+					.then((reg) => {
+					console.log('Service worker registered.', reg);
+					});
+			});
+			}
+	</script>
+
 </head>

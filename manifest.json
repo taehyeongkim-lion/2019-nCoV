@@ -1,0 +1,16 @@
+
+{
+    "lang": "kr",
+    "name": "2019-ncov",
+    "short_name": "NCOV-PROJECT",
+    "icons": [
+      {
+        "src": "./assets/img/virus.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/2019-nCoV",
+    "display": "standalone",
+    "orientation": "natural"
+  }
