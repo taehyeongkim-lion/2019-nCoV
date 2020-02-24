@@ -7,9 +7,9 @@ baseurl: "/2019-nCoV" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
-author: Likielion-Urgent-Dev-TF # add your name
+author: Likielion@DGIST # add your name
 author-pic: likelion-logo.png
-about-author: We are Likielion-Urgent-Dev-TF. We develope things to solve social problems
+about-author: We are Likielion@DGIST. We develope things to solve social problems
 
 # Contact links
 email: # Add your Email address
