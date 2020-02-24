@@ -43,7 +43,7 @@ overflow: hidden;
 
         {% for pt in site.data.patients %}
           <button class="accordion"> {{pt.name}} </button>
-          <div class="panel">
+          <div>
             {% include map-patient.html paths=pt.paths mapid=pt.name %}
           </div>
         {% endfor %}
