@@ -14,7 +14,6 @@ layout: default
           <div class="page-date"><time datetime="{{page.date}}">{{page.date | date: '%Y, %b %d'}}</time></div>
         </div>
         <!-- contents here! -->
-        <h1> this is virus info</h1>
         {{page.content | markdownify}}
         <div class="page-footer">
           <div class="page-tag">
@@ -29,6 +28,8 @@ layout: default
             <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
           </div><!-- End Share -->
+          <div class="just-comments" data-apikey="2594dc6c-33fc-46d8-8ea4-434553814830"></div>
+
         </div>
         {% include author-box.html %}
         {% comment %}
@@ -42,5 +43,7 @@ layout: default
   {% comment %}
   {% include search.html %}
   {% endcomment %}
+
+
   {% include footer.html %}
 </div>
